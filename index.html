@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Centelhas / Regras Online</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo">Sem Telhas</div>
+        </div>
+        <div class="controls">
+            <input id="q" class="search" placeholder="Pesquisar..." />
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="toc" id="toc">
+            <h3>Índice</h3>
+            <button data-target="mecanica">Capítulo 1 — O Essencial / Mecânica</button>
+            <button data-target="pandemonio">Capítulo 2 — Pandemônio & Destino</button>
+            <button data-target="criacao">Capítulo 3 — Criação de Personagem</button>
+            <button data-target="combate">Capítulo 4 — Combate</button>
+            <button data-target="condicoes">Capítulo 5 — Condições & Aflições</button>
+            <button data-target="equipamento">Capítulo 6 — Equipamento</button>
+            <button data-target="habilidades">Capítulo 7 — Habilidades</button>
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:10px 0" />
+        </aside>
+
+        <main id="main">
+            <article id="mecanica" class="section">
+                <h1>Capítulo 1 — O Essencial</h1>
+                <div class="meta">Filosofia, mecânica central e resolução de ações.</div>
+                <div class="section-sub">
+                    <h2>A Filosofia do Jogo</h2>
+                    <p>O sistema utiliza PbtA como base, focado em narrativa e interpretação, com alto risco e alta
+                        mortalidade — inspirado por estilos gritties como Mork Borg e Ronin. As histórias nascem tanto
+                        das vitórias quanto das falhas.</p>
+                </div>
+
+                <div class="section-sub">
+                    <h2>A Mecânica Central: O Teste</h2>
+                    <p>Um Teste é executado quando o resultado é incerto. A rolagem consiste em <strong>dois
+                            dados</strong>:</p>
+                    <ul>
+                        <li><strong>Dado Principal:</strong> sempre um <strong>D12</strong>.</li>
+                        <li><strong>Dado Auxiliar:</strong> varia de <strong>D2 a D12</strong>, determinado pela
+                            <em>Balança</em>.
+                        </li>
+                    </ul>
+                    <p>Resultado final = D12 (+) ou (-) Dado Auxiliar, dependendo da Balança.</p>
+                </div>
+
+                <div class="section-sub">
+                    <h2>A Balança e os Graus</h2>
+                    <p>A Balança mede quão favorável a situação é. Cada grau positivo melhora o dado auxiliar; negativo
+                        piora. O atributo principal da ação define a base da Balança.</p>
+                    <div class="small">
+                        <strong>Tabela resumida:</strong>
+                        <table style="width:40%;margin-left:30%;">
+                            <tr>
+                                <th style="text-align:center;padding:4px;border-bottom:1px solid #333;">Balança</th>
+                                <th style="text-align:center;padding:4px;border-bottom:1px solid #333;">Dado Auxiliar
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>+6</td>
+                                <td>+D12</td>
+                            </tr>
+                            <tr>
+                                <td>+5</td>
+                                <td>+D10</td>
+                            </tr>
+                            <tr>
+                                <td>+4</td>
+                                <td>+D8</td>
+                            </tr>
+                            <tr>
+                                <td>+3</td>
+                                <td>+D6</td>
+                            </tr>
+                            <tr>
+                                <td>+2</td>
+                                <td>+D4</td>
+                            </tr>
+                            <tr>
+                                <td>+1</td>
+                                <td>+D2</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>-1</td>
+                                <td>-D2</td>
+                            </tr>
+                            <tr>
+                                <td>-2</td>
+                                <td>-D4</td>
+                            </tr>
+                            <tr>
+                                <td>-3</td>
+                                <td>-D6</td>
+                            </tr>
+                            <tr>
+                                <td>-4</td>
+                                <td>-D8</td>
+                            </tr>
+                            <tr>
+                                <td>-5</td>
+                                <td>-D10</td>
+                            </tr>
+                            <tr>
+                                <td>-6</td>
+                                <td>-D12</td>
+                            </tr>
+                        </table>
+                        <p>Se a Balança exceder +6 ou -6, cada ponto adicional vira +2 ou -2 diretamente no resultado
+                            final.</p>
+                    </div>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Resolução de Ações</h2>
+                    <p>Os níveis de sucesso são:</p>
+                    <ul>
+                        <li><strong>3 ou menos</strong> — Falha Crítica (MJ ganha +2 Pandemônio).</li>
+                        <li><strong>4 a 6</strong> — Falha (MJ ganha +1 Pandemônio).</li>
+                        <li><strong>7 a 10</strong> — Sucesso Parcial (MJ ganha +1 Pandemônio).</li>
+                        <li><strong>11 a 14</strong> — Sucesso Completo (recupera 1 Afinco).</li>
+                        <li><strong>15+</strong> — Sucesso Crítico (ganha 1 Destino).</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="pandemonio" class="section" style="display:none">
+                <h1>Capítulo 2 — Pandemônio & Destino</h1>
+                <div class="meta">Recursos que equilibram o poder entre Mestre e Jogadores.</div>
+
+                <div class="section-sub">
+                    <h2>Pandemônio (Recurso do Mestre)</h2>
+                    <p>Pandemônio representa caos e ameaça. É ganho quando os jogadores falham e gasto pelo Mestre para
+                        complicar ou tornar a cena mais perigosa.</p>
+                    <ul>
+                        <li>Falha Crítica (3 ou menos): <strong>+2</strong></li>
+                        <li>Falha (4–6): <strong>+1</strong></li>
+                        <li>Sucesso Parcial (7–10): <strong>+1</strong></li>
+                    </ul>
+                    <p><strong>Exemplos de gastos:</strong></p>
+                    <ul>
+                        <li><strong>Custo 1:</strong> Complicação ambiental ou ação simples de um inimigo.</li>
+                        <li><strong>Custo 2:</strong> Conceder um turno completo a um inimigo (mover + ação complexa).
+                        </li>
+                        <li><strong>Custo 3+:</strong> Evento catastrófico, reviravolta dramática, habilidade
+                            devastadora.</li>
+                    </ul>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Destino (Recurso dos Jogadores)</h2>
+                    <p>Destino é raro e poderoso; obtido apenas por Sucesso Crítico (15+). Cada ponto pode ser gasto
+                        para:</p>
+                    <ul>
+                        <li>Recuperação Heroica — restaurar Afinco máximo OU recuperar Resistência igual a 3 rolagens do
+                            dado de Carne.</li>
+                        <li>Ignorar a Realidade — tratar a rolagem como se a Balança fosse no mínimo 0 (ignora Graus
+                            negativos).</li>
+                        <li>Influenciar a Narrativa — introduzir um fato novo plausível (MJ decide plausibilidade).</li>
+                        <li>Fortuna — aumentar o nível do resultado do teste em um passo.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="criacao" class="section" style="display:none">
+                <h1>Capítulo 3 — Criação de Personagem</h1>
+                <div class="meta">Passo a passo para criar personagens jogáveis.</div>
+
+                <div class="section-sub">
+                    <h2>Passo 1 — Atributos</h2>
+                    <p>Três atributos fundamentais:</p>
+                    <ul>
+                        <li><strong>Carne</strong> — força física, agilidade, resistência, combate.</li>
+                        <li><strong>Cérebro</strong> — raciocínio, conhecimento, percepção, pontaria.</li>
+                        <li><strong>Âmago</strong> — força de vontade, carisma, resiliência mental.</li>
+                    </ul>
+                    <p>Todos começam com <strong>-3</strong> em cada atributo.</p>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Passo 2 — Pontos de Devoção (PD)</h2>
+                    <p>Você recebe <strong>10 PD</strong> para gastar em aumentos de atributos, Vitalidade e
+                        Habilidades.</p>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Passo 3 — Gastar os Pontos</h2>
+                    <ul>
+                        <li>Subir níveis negativos (−3 → 0): <strong>1 PD por passo</strong>.</li>
+                        <li>Para níveis positivos: o custo é igual ao nível alvo (0→+1 = 1 PD; +1→+2 = 2 PD).</li>
+                        <li>Vitalidade inicial = 1; cada ponto adicional custa <strong>1 PD</strong>.</li>
+                        <li>Habilidades são compradas com PD conforme listadas no capítulo de Habilidades.</li>
+                    </ul>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Passo 4 — Atributos Secundários</h2>
+                    <ul>
+                        <li><strong>Vitalidade:</strong> Saúde física (pontos que, quando reduzidos, levam a testes de
+                            morte).</li>
+                        <li><strong>Afinco:</strong> Valor = <em>1 + modificador de Cérebro</em>. Gasto para usar
+                            habilidades ativas.</li>
+                        <li><strong>Resistência:</strong> Barra de vida principal — determinado por rolagens na criação
+                            (ver Combate).</li>
+                        <li><strong>Alma:</strong> Começa em 10 e aumenta +2 por ponto de Âmago.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="combate" class="section" style="display:none">
+                <h1>Capítulo 4 — Combate</h1>
+                <div class="meta">Regras de ataque, defesa, dano e testes de morte.</div>
+
+                <div class="section-sub">
+                    <h2>Visão Geral</h2>
+                    <p>Combate é rápido, narrativo e letal. Não usa ordem de turnos rígida: jogadores agem e o Mestre
+                        reage gastando Pandemônio.</p>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Realizando um Ataque</h2>
+                    <p><strong>Ataques Corpo a Corpo:</strong></p>
+                    <ul>
+                        <li>Teste de Ataque: role um Teste usando <strong>Carne</strong>.</li>
+                        <li>Dano: <strong>Dado de Dano da Arma + modificador de Carne</strong>.</li>
+                    </ul>
+                    <p><strong>Ataques à Distância:</strong></p>
+                    <ul>
+                        <li>Teste de Ataque: role um Teste usando <strong>Cérebro</strong>.</li>
+                        <li>Dano: apenas os dados de dano da arma (sem modificador de Carne).</li>
+                        <li>Armas de fogo têm munição limitada e precisam de ações para recarregar.</li>
+                    </ul>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Recebendo Dano — Três Camadas</h2>
+                    <ol>
+                        <li><strong>Armadura</strong>: Reduz o dano por 1ª camada (Nível 1 = 1d2; Nível 2 = 1d4; Nível 3
+                            = 1d6).</li>
+                        <li><strong>Resistência</strong>: Valor fixo, calculado por rolagens durante a criação; veja
+                            tabela abaixo.</li>
+                        <li><strong>Vitalidade</strong>: Quando a Resistência chega a zero, dano extra reduz Vitalidade.
+                        </li>
+                    </ol>
+
+                    <div class="small">
+                        <strong>Cálculo da Resistência:</strong> Para cada ponto de Vitalidade, role um dado cujo tipo
+                        corresponde ao Grau do seu atributo Carne:
+                        <table style="width:40%;margin-left:30%;">
+                            <tr>
+                                <th>Carne</th>
+                                <th>Dado de Resistência</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>D2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>D4</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>D6</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>D8</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>D10</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>D12</td>
+                            </tr>
+                        </table>
+                        A soma destes dados é o seu máximo de Resistência. Ao ganhar Vitalidade permanente, role mais um
+                        dado de Carne e some ao máximo.
+                    </div>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Caindo em Combate — Testes de Morte</h2>
+                    <p>Quando Vitalidade = 0, você fica incapacitado. Ao final de cada rodada narrativa, faça um Teste
+                        de Âmago:</p>
+                    <ul>
+                        <li>Sucesso Completo: estabiliza.</li>
+                        <li>Falha: acumula uma falha.</li>
+                        <li>Limite para a Morte: número de falhas permitidas = modificador de Âmago (mín. 1). Ex: Âmago
+                            2 → 2 falhas permitidas; a terceira falha = morte.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="condicoes" class="section" style="display:none">
+                <h1>Capítulo 5 — Condições & Aflições</h1>
+                <div class="meta">Estados negativos que impactam ritmo e escolhas em cena.</div>
+
+                <div class="section-sub">
+                    <h2>Aflições Menores</h2>
+                    <p>Aplicadas por ataques bem-sucedidos (Sucesso Completo) e causam penalidades ou benefícios
+                        táticos:</p>
+                    <ul>
+                        <li>Aplicação: Sucesso Completo (11+) num ataque aplica a Aflição Menor do grupo de arma do
+                            atacante.</li>
+                        <li>Efeito: Aflição Menor dá <strong>-1 Grau</strong> nos testes da criatura. Ataques contra ela
+                            recebem +1 Grau.</li>
+                        <li>Acumulação: Não se pode sofrer a mesma Aflição Menor mais de uma vez, mas diferentes
+                            condições se acumulam.</li>
+                        <li>Duração: Dura até que a criatura gaste sua ação principal para se recompor.</li>
+                    </ul>
+
+                    <div class="small">
+                        <strong>Lista (resumida):</strong>
+                        <table style="width:50%;margin-left:25%;">
+                            <tr>
+                                <th>Grupo de Arma</th>
+                                <th>Aflição Menor</th>
+                            </tr>
+                            <tr>
+                                <td>Armas de Briga</td>
+                                <td>Desorientado</td>
+                            </tr>
+                            <tr>
+                                <td>Lâminas Leves</td>
+                                <td>Sangrando</td>
+                            </tr>
+                            <tr>
+                                <td>Ferramentas de Impacto</td>
+                                <td>Atordoado</td>
+                            </tr>
+                            <tr>
+                                <td>Lâminas Pesadas</td>
+                                <td>Ferimento Grave</td>
+                            </tr>
+                            <tr>
+                                <td>Armas de Haste</td>
+                                <td>Desequilibrado</td>
+                            </tr>
+                            <tr>
+                                <td>Pistolas Semiautomáticas</td>
+                                <td>Ferida Dolorosa</td>
+                            </tr>
+                            <tr>
+                                <td>Revólveres</td>
+                                <td>Abalado</td>
+                            </tr>
+                            <tr>
+                                <td>Espingardas</td>
+                                <td>Derrubado</td>
+                            </tr>
+                            <tr>
+                                <td>Rifles de Precisão</td>
+                                <td>Perfurado</td>
+                            </tr>
+                            <tr>
+                                <td>Armas de Arremesso</td>
+                                <td>Ferida Exposta</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Aflições Maiores</h2>
+                    <ul>
+                        <li><strong>Amedrontado:</strong> Você precisa tentar fugir ou se esconder; se não puder, sofre
+                            -2 Graus em todas ações.</li>
+                        <li><strong>Cego:</strong> Falha automática em testes baseados em visão; ataques contra você
+                            recebem +3 Graus; seus ataques -3 Graus.</li>
+                        <li><strong>Envenenado / Queimando:</strong> Sofre dano direto na Vitalidade no início do turno
+                            (ignora Armadura e Resistência); ação principal para tentar remover a condição via teste de
+                            Carne.</li>
+                        <li><strong>Imobilizado:</strong> Não pode se mover; ataques corpo a corpo contra você têm +1
+                            Grau de vantagem.</li>
+                        <li><strong>Inconsciente:</strong> Incapacitado; normalmente ocorre quando Vitalidade chega a
+                            zero.</li>
+                        <li><strong>Controlado:</strong> Você não controla suas ações; outra entidade determina suas
+                            escolhas.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id="equipamento" class="section" style="display:none">
+                <h1>Capítulo 6 — Equipamento</h1>
+                <div class="meta">Armas e seus dados de dano.</div>
+
+                <div class="section-sub">
+                    <h2 style="margin-top: 20px;margin-bottom:0px;text-align:center;">Armas Corpo a Corpo</h2>
+                    <table style="width:80%;margin-left:10%;">
+                        <tr>
+                            <th>Grupo</th>
+                            <th>Exemplos</th>
+                            <th>Dano</th>
+                        </tr>
+
+                        <tr>
+                            <td>Armas de Briga</td>
+                            <td>Soco-inglês, Canivete, Porrete</td>
+                            <td>1d4</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lâminas Leves</td>
+                            <td>Adaga, Faca de Combate</td>
+                            <td>1d6</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ferramentas de Impacto</td>
+                            <td>Pé de Cabra, Martelo</td>
+                            <td>1d8</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lâminas Pesadas</td>
+                            <td>Machete, Katana</td>
+                            <td>1d10</td>
+                        </tr>
+
+                        <tr>
+                            <td>Armas de Haste</td>
+                            <td>Lança Improvisada, Taco de Sinuca</td>
+                            <td>1d8</td>
+                        </tr>
+                    </table>
+                    <h2 style="margin-top: 20px;margin-bottom:0px;text-align:center;">Armas à Distância</h2>
+                    <table style="width:80%;margin-left:10%;">
+                        <tr>
+                            <th>Grupo</th>
+                            <th>Exemplos</th>
+                            <th>Dano</th>
+                        </tr>
+
+                        <tr>
+                            <td>Pistolas Semiautomáticas</td>
+                            <td>Pistola 9mm</td>
+                            <td>2d6</td>
+                        </tr>
+
+                        <tr>
+                            <td>Revólveres</td>
+                            <td>.38, .357</td>
+                            <td>2d8</td>
+                        </tr>
+
+                        <tr>
+                            <td>Espingardas</td>
+                            <td>Curta / Média / Longa</td>
+                            <td>4d6 / 2d6 / 1d6</td>
+                        </tr>
+
+                        <tr>
+                            <td>Rifles de Precisão</td>
+                            <td>Rifle de Caça</td>
+                            <td>2d10</td>
+                        </tr>
+
+                        <tr>
+                            <td>Armas de Arremesso</td>
+                            <td>Faca de Arremesso</td>
+                            <td>1d6</td>
+                        </tr>
+                    </table>
+            </article>
+
+            <article id="habilidades" class="section" style="display:none">
+                <h1>Capítulo 7 — Habilidades</h1>
+                <div class="meta">Habilidades listadas por custo em Devoção (PD).</div>
+
+                <div class="section-sub">
+                    <h2>Habilidades de 1 Devoção</h2>
+                    <ul>
+                        <li><strong>Perícia (Passiva):</strong> escolha uma perícia (ex: Escalar, Furtividade,
+                            Medicina); você ganha +2 Graus em testes
+                            relacionados.</li>
+                        <li><strong>Perícia em Arma (Ativa, 1 Afinco):</strong> Escolha um grupo de armas. Ao atacar com
+                            uma arma desse grupo, pode gastar 1 Afinco para ganhar +2 Graus na Balança.
+                        </li>
+                        <li><strong>Resiliente (Passiva):</strong> Adicione o seu valor de Vitalidade ao seu máximo de
+                            Resistência.
+                        </li>
+                        <li><strong>Robusto (Passiva):</strong> Para o cálculo de Resistência, o seu dado de Carne
+                            é considerado, no mínimo, um D4, mesmo que o seu atributo Carne seja 1 ou inferior.
+                        </li>
+                        <li><strong>Estado de Flow (Passiva):</strong> Passiva. Ao rolar um 12 no Dado Principal, o
+                            nível de sucesso do seu teste aumenta em um.
+                        </li>
+                        <li><strong>Alma Grandiosa (Passiva, Req: Âmago 1):</strong> Ganha 5 de Alma por ponto de Âmago,
+                            em vez de 2.</li>
+                        <li style="margin-bottom:0%;"><strong>Protetor:</strong> <em>Ativa (1 Afinco, Req: Âmago
+                                1).</em>
+                            Quando um aliado ao seu alcance é alvo de um ataque, você pode intervir para receber o dano
+                            diretamente no lugar dele.
+                            Você escolhe uma das duas opções:</li>
+                        <ul style="margin-left: 1.2rem;">
+                            <li style="margin-bottom:0%;"><strong>Receber Metade do Dano:</strong> Você sofre metade do
+                                dano total do ataque
+                                (arredondado para cima), ignorando a sua Armadura.</li>
+                            <li><strong>Receber o Dano Inteiro:</strong> Você sofre o dano total do ataque, mas pode
+                                usar a sua Armadura para tentar reduzi-lo.</li>
+                        </ul>
+                        <li><strong>Ajudar (Ativa, 1 Afinco, Req: Cérebro 1):</strong> Faça um teste de Cérebro para
+                            concede Graus de vantagem a um aliado (Sucesso Parcial: +1 Grau, Completo: +2 Graus,
+                            Crítico: +3 Graus).
+                        </li>
+                        <li><strong>Ataque Oportuno (Ativa, 1 Afinco, Req: Cérebro 1):</strong> Antes de um aliado rolar
+                            um teste de ataque, você pode declarar que está a preparar um ataque oportuno e gastar 1
+                            Afinco. Se o resultado do teste do seu aliado for um Sucesso Completo (11+) ou melhor, o seu
+                            próximo ataque contra o mesmo alvo nesta cena é um Sucesso Completo automático. Se o seu
+                            aliado falhar ou obtiver apenas um Sucesso Parcial, o Afinco é gasto sem efeito.
+                        </li>
+                        <li><strong>Treinamento Marcial (Passiva, Req: Carne 1):</strong> O seu ataque desarmado causa
+                            1d2 de
+                            dano.
+                        </li>
+                        <li><strong>Adepto Marcial (Passiva, Req: Carne 2, Treinamento Marcial):</strong> Ao calcular o
+                            dano de um ataque desarmado, você dobra o seu
+                            modificador de Carne antes de o somar ao resultado.
+                        </li>
+                        <li><strong>Combate Inteligente ( Ativa, 1 Afinco, Req: Cérebro 2):</strong> Use Cérebro em vez
+                            de Carne em testes de ataque com armas corpo a corpo.</li>
+                        <li><strong>Imobilizador (Ativa, 1 Afinco, Req: Carne 2):</strong> — várias habilidades de uso
+                            tático listadas no livro.</li>
+                        <li><strong>Ataque Múltiplo (Ativa, 1 Afinco por alvo extra):</strong> Faça um teste de Carne
+                            para agarrar um oponente. Em um sucesso completo, ele fica imobilizado e os ataques contra
+                            ele recebem +1 Grau na Balança.</li>
+                        <li><strong>Afiado (Passiva):</strong> O seu valor máximo e inicial de Afinco é aumentado em 1.
+                        </li>
+                        <li><strong>Mira Tática (Ativa, Req: Cerebro 1):</strong> Após acertar um ataque com uma arma à
+                            distância, você pode gastar 1 Afinco para adicionar o seu modificador de Cérebro ao dano
+                            total daquele tiro.
+                        </li>
+                        <li><strong>Mirar (Passiva, Req: Cérebro 1, Âmago 1)</strong> Você pode gastar a sua ação
+                            principal do turno para mirar. Ao fazer isso, você recebe um bónus de +2 Graus na Balança no
+                            seu próximo ataque.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Habilidades de 2 Devoção</h2>
+                    <ul>
+                        <li><strong>Esquiva (Ativa, 1 Afinco, Req: Carne 1):</strong> Faça um teste de Carne para se
+                            defender de um
+                            ataque.
+                        </li>
+                        <ul style="margin-left: 1.2rem;">
+                            <li style="margin-bottom:0%;"><strong>Sucesso Completo ou Crítico:</strong> Você nega o dano
+                                sem custo.</li>
+                            <li style="margin-bottom:0%;"><strong>Sucesso Parcial</strong> Você nega o dano, mas o
+                                Pandemônio gerado
+                                pelo teste é dobrado.</li>
+                            <li><strong>Falha ou Falha Crítica:</strong> Você sofre o dano do ataque, e o Pandemônio
+                                gerado pelo seu teste de defesa também é dobrado.</li>
+                        </ul>
+                        <li><strong>Durão (Ativa, 1 Afinco, Req: Carne 2):</strong> Ao receber dano e rolar o dado da
+                            sua Armadura,
+                            você pode gastar 1 Afinco para somar o seu modificador de Carne ao resultado do dado,
+                            aumentando o total de dano reduzido.
+                        </li>
+                        <li><strong>Aparar (Ativa, 2 Afinco, Req: Cerebro 1, Carne 1):</strong> Faça um teste de ataque
+                            para se defender de um
+                            ataque corpo a corpo. Em um Sucesso Completo ou melhor, você nega o dano e realiza um ataque
+                            corpo a corpo imediato contra o seu atacante.
+                        </li>
+                        <li><strong>Ponto Fraco (Ativa, 2 Afinco, Cerebro 2):</strong> Analise um inimigo. Em um
+                            sucesso, você descobre uma vulnerabilidade. O número de vezes que esta pode ser explorada
+                            depende do sucesso (Parcial: 1 vez, Completo: 2 vezes, Crítico: 3 vezes). Para explorar,
+                            você pode escolher um de dois efeitos:
+                        </li>
+                        <ul style="margin-left: 1.2rem;">
+                            <li style="margin-bottom:0%;">Conceder +1 Grau na Balança para todos os aliados que atacarem
+                                o alvo.</li>
+                            <li>Adicionar um dado de dano extra (do mesmo tipo da sua arma) no seu próximo ataque contra
+                                ele</li>
+                        </ul>
+                        <li><strong>Força de Vontade (Ativa, 1 Afinco, Req: Âmago 2):</strong> Ao receber dano fatal,
+                            faça um teste de Âmago para sobreviver com 1 de Vitalidade (requer um sucesso completo).
+                        </li>
+
+                        <li><strong>Perseverança (Ativa, 2 Afinco, Req: Âmago 2):</strong> Ao falhar num teste, role o
+                            D12 novamente e fique com o melhor resultado.</li>
+
+                        <li><strong>Brutamontes (Ativa, 2 Afinco, Req: Carne 2):</strong> Se o seu ataque corpo a corpo
+                            acertar, a Armadura do alvo é considerada 2 níveis mais baixa para o cálculo de dano deste
+                            ataque (ex: Nível 3 torna-se Nível 1; Nível 2 torna-se Nível 0).</li>
+
+                        <li><strong>Combo (Ativa, 2 Afinco, Req: Carne 2, Cérebro 1):</strong> Cada acerto consecutivo
+                            concede +1 Grau para o próximo ataque (máx. +3).</li>
+
+                        <li><strong>Ataque em Grupo (Ativa, 1 Afinco por participante, Req: Todos devem ter a
+                                habilidade):</strong> Todos os participantes declaram a sua ação e fazem os seus testes.
+                            Os resultados individuais são convertidos em "Pontos de Equipa" (Crítico=3, Completo=2,
+                            Parcial=1, Falha=-1, Crítica=-2). A soma dos pontos determina o resultado final da manobra
+                            conjunta:
+                            <ul style="margin-left: 1.2rem;">
+                                <li style="margin-bottom:0%;">Total Negativo: Falha Crítica.</li>
+                                <li style="margin-bottom:0%;">Total de 1 ou menos: Falha.</li>
+                                <li style="margin-bottom:0%;">Total de 2: Sucesso Parcial (neste resultado, todos os
+                                    participantes podem realizar
+                                    um ataque individual).</li>
+                                <li style="margin-bottom:0%;">Total de 3: Sucesso Completo (todos recuperam 1 Afinco).
+                                </li>
+                                <li>Total de 4+: Sucesso Crítico (todos recebem 1 Destino).</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Ataque Poderoso (Ativa, 1 Afinco, Req: Carne 2):</strong> Receba -2 Graus de
+                            desvantagem no ataque para triplicar o seu bónus de Carne no dano.</li>
+
+                        <li><strong>Ataque Furtivo (Passiva, Req: Cérebro 1):</strong> O seu primeiro ataque contra
+                            inimigos desavisados ganha +1 Grau e +1 dado de dano.</li>
+
+                        <li><strong>Restauração Rápida (Ativa, 1 Afinco, Req: Cérebro 1, Perícia em Medicina):</strong>
+                            Faça um teste de Cérebro (Medicina) para curar um alvo. Dependendo do sucesso (Parcial,
+                            Completo ou Crítico), o alvo rola 1, 2 ou 3 dos seus dados de Carne, respetivamente, e
+                            recupera essa quantidade de Resistência.</li>
+
+                        <li><strong>Respiro (Passiva):</strong> Se você não realizar uma ação principal no seu turno
+                            (como atacar), você recupera 1 Afinco.</li>
+
+                        <li><strong>Recuperação Rápida (Passiva, Req: Âmago 2 OU Carne 2):</strong> Ao receber cura de
+                            qualquer fonte que recupere pontos de Vitalidade, adicione um dado de cura extra do mesmo
+                            tipo que a fonte original (ex: se a cura for 1d6, passa a ser 2d6).</li>
+
+                    </ul>
+                </div>
+
+                <div class="section-sub">
+                    <h2>Habilidades de 3 Devoção</h2>
+                    <ul>
+                        <li><strong>Ataque Crítico (Passiva, Req: Perícia em Arma):</strong> explosão no dano ao rolar o
+                            valor máximo no dado
+                            de dano.</li>
+                        <li><strong>Jeitinho (Ativa, 2 Afinco):</strong> trocar o atributo original por outro, com
+                            justificativa narrativa.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <footer>Made by Krathur</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
